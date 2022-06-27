@@ -27,7 +27,6 @@
 <!-- Delete order -->
 
 <div class="delete-order">
-  <h2>Delete Order</h2>
   <label></label>
   <select #orderSelect (change)="onChange(orderSelect.value)" [(ngModel)]="deleteOrderID">
       <option *ngFor="let order of orders" [value]="order.orderID">{{order.orderID}}</option>
@@ -38,7 +37,6 @@
 <!-- Add order -->
 
 <div class="create-order">
-  <h2>add an order</h2>
   <label>Customer </label>
   <select #custSelect (change)="onChange(custSelect.value)" [(ngModel)]="createCustID">
       <option *ngFor="let customer of customers" [value]="customer.custID">{{customer.fullName}}</option>
