@@ -17,7 +17,8 @@ createOrderDate: Date = new Date(2022, 6, 27);
 createShipDate: Date = new Date(2022, 6, 27);
 createQuantity: number = 1;
 createShipMode: string = this.shipMode[0];
-
+deletingOrder: boolean = false;
+deleteOrderID: number = 1;
 
 constructor(private _main: MainService) { }
 
@@ -32,14 +33,13 @@ constructor(private _main: MainService) { }
     console.log(event);
 
   }
-  deleteOrder(orderID: number) {
-    this._main.deleteOrder(orderID).subscribe(data => data,
-      () => {
-        this._main.getAllOrders().subscribe( null, () => {
-        });
-      });
+  deleteOrder() {
+    this.deletingOrder = true;
+    this._main.deleteOrder(this.deleteOrderID).subscribe(null, null, () => {
+      this.fetchData();
+      this.deletingOrder = false;
+    });
   }
-
   createOrder() {
     this._main.createOrder(this.createCustID, this.createProdID, this.createQuantity, this.createOrderDate, this.createShipDate, this.createShipMode).subscribe(null, null, () => {
       this.fetchData();
@@ -52,7 +52,8 @@ constructor(private _main: MainService) { }
     });
     this._main.getAllProducts().subscribe(data => this.products = data, null, () => {
       this.createProdID = this.products[0].prodID;
-    });
+    }
+    );
 
   }
 }

@@ -32,7 +32,7 @@ namespace api
                                 .AllowAnyMethod()
                                 .AllowAnyHeader();
                         }));
-
+services.AddSwaggerGen();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -49,7 +49,7 @@ namespace api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "api v1"));
             }
-
+app.UseSwagger();
             app.UseHttpsRedirection();
 
             app.UseRouting();

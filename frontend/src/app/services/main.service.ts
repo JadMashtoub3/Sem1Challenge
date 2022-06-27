@@ -36,8 +36,8 @@ export class MainService {
   }
   deleteOrder(orderID: number): Observable<string> {
     const params = new HttpParams()
-      .append('OrderID', orderID)
-    return this._http.delete<string>("orders/", { 'params': params })
+      .append('orderID', orderID);
+    return this._http.delete<string>(this.baseUrl + '/delete-order', { 'params': params });
   }
 }
 export interface Order {
