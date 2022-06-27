@@ -11,6 +11,7 @@ namespace challengeAPI
         private CustomerDBHandler dbHandler = new CustomerDBHandler();
 
         [HttpGet]
+        [EnableCors("MyPolicy")]
         [Route("/customers")]
         public IEnumerable<Customer> Get()
         {

@@ -1,1 +1,25 @@
-<p>main works!</p>
+<table>
+  <thead>
+      <tr>
+          <th>OrderID</th>
+          <th>CustID</th>
+          <th>ProdID</th>
+          <th>OrderDate</th>
+          <th>Quantity</th>
+          <th>ShipDate</th>
+          <th>ShipMode</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Order of orders">
+      <td>{{Order.orderID}}</td>
+      <td>{{Order.orderDate}}</td>
+      <td>{{Order.quantity}}</td>
+      <td>{{Order.shipDate}}</td>
+      <td>{{Order.custID}}</td>
+      <td>{{Order.prodID}}</td>
+      <td>{{Order.shipMode}}</td>
+  </tr>
+</tbody>
+</table>
+

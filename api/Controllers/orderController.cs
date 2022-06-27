@@ -12,6 +12,7 @@ namespace challengeAPI
         private OrderDBHandler dbHandler = new OrderDBHandler();
 
         [HttpGet]
+        [EnableCors("MyPolicy")]
         [Route("/orders")]
         public IEnumerable<Order> Get()
         {
@@ -27,6 +28,7 @@ namespace challengeAPI
         /// <param name="shipMode"></param>
         /// <returns></returns>
         [HttpPost]
+        [EnableCors("MyPolicy")]
         [Route("/add-order")]
         public string CreateNewOrder(int OrderID, string CustID, string ProdID, int Quantity, string ShipMode)
         {
@@ -38,6 +40,7 @@ namespace challengeAPI
         /// <param name="orderID"></param>
         /// <returns></returns>
         [HttpDelete]
+        [EnableCors("MyPolicy")]
         [Route("/delete-order")]
         public string DeleteOrder(int OrderID)
         {
@@ -49,6 +52,7 @@ namespace challengeAPI
         /// <param name="newOrder"></param>
         /// <returns></returns>
         [HttpPut]
+        [EnableCors("MyPolicy")]
         [Route("/update-order")]
         public string UpdateOrder([FromBody] Order newOrder)
         {

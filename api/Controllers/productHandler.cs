@@ -11,6 +11,7 @@ namespace challengeAPI
         private ProductDBHandler dbHandler = new ProductDBHandler();
 
         [HttpGet]
+        [EnableCors("MyPolicy")]
         [Route("/products")]
         public IEnumerable<Product> Get()
         {
