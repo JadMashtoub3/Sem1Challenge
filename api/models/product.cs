@@ -2,7 +2,7 @@ using System;
 
 namespace challengeAPI
 {
-    public class product
+    public class Product
     {
        public string ProdID { get; set; }
        public int CatID{ get; set; }

@@ -57,13 +57,14 @@ CREATE TABLE Shipping (
     PRIMARY KEY(ShipMode)
 )
 CREATE TABLE [Order] (
+    OrderID INT,
     CustID NVARCHAR(100), 
     ProdID NVARCHAR(100),
     OrderDate DATETIME,
     Quantity INT,
     ShipDate DATETIME,
     ShipMode NVARCHAR(100),
-    PRIMARY KEY (OrderDate),
+    PRIMARY KEY (OrderID),
     FOREIGN KEY (ProdID) REFERENCES Product,
     FOREIGN KEY (CustID) REFERENCES Customer,
     FOREIGN KEY (ShipMode) REFERENCES Shipping
@@ -101,17 +102,17 @@ INSERT INTO Shipping (ShipMode) VALUES
 ('First Class'),
 ('Overnight Express');
 
-INSERT INTO [Order] (CustID, ProdID, OrderDate, Quantity, ShipDate, ShipMode) VALUES
-    ('CG-12520','FUR-BO-10001798','2016-11-09 00:00:00',2,'2016-11-11 00:00:00','Second Class'),
-    ('CG-12520','FUR-CH-10000454','2016-11-08 00:00:00',3,'2016-11-11 00:00:00','Second Class'),
-    ('CG-12520','OFF-LA-10000240','2016-06-12 00:00:00',2,'2016-06-16 00:00:00','Second Class'),
-    ('DV-13045','OFF-LA-10000240','2015-11-21 00:00:00',2,'2015-11-26 00:00:00','Second Class'),
-    ('DV-13045','OFF-LA-10000240','2014-10-11 00:00:00',1,'2014-10-15 00:00:00','Standard Class'),
-    ('DV-13045','FUR-CH-10000454','2016-11-12 00:00:00',9,'2016-11-16 00:00:00','Standard Class'),
-    ('SO-20335','OFF-LA-10000240','2016-09-02 00:00:00',5,'2016-09-08 00:00:00','Standard Class'),
-    ('SO-20335','FUR-BO-10001798','2017-08-25 00:00:00',2,'2017-08-29 00:00:00','Overnight Express'),
-    ('SO-20335','FUR-CH-10000454','2017-06-22 00:00:00',2,'2017-06-26 00:00:00','Standard Class'),
-    ('SO-20335','FUR-BO-10001798','2017-05-01 00:00:00',3,'2017-05-02 00:00:00','First Class');
+INSERT INTO [Order] (OrderID, CustID, ProdID, OrderDate, Quantity, ShipDate, ShipMode) VALUES
+    (1,'CG-12520','FUR-BO-10001798','2016-11-09 00:00:00',2,'2016-11-11 00:00:00','Second Class'),
+    (2,'CG-12520','FUR-CH-10000454','2016-11-08 00:00:00',3,'2016-11-11 00:00:00','Second Class'),
+    (3,'CG-12520','OFF-LA-10000240','2016-06-12 00:00:00',2,'2016-06-16 00:00:00','Second Class'),
+    (4,'DV-13045','OFF-LA-10000240','2015-11-21 00:00:00',2,'2015-11-26 00:00:00','Second Class'),
+    (5,'DV-13045','OFF-LA-10000240','2014-10-11 00:00:00',1,'2014-10-15 00:00:00','Standard Class'),
+    (6,'DV-13045','FUR-CH-10000454','2016-11-12 00:00:00',9,'2016-11-16 00:00:00','Standard Class'),
+    (7,'SO-20335','OFF-LA-10000240','2016-09-02 00:00:00',5,'2016-09-08 00:00:00','Standard Class'),
+    (8,'SO-20335','FUR-BO-10001798','2017-08-25 00:00:00',2,'2017-08-29 00:00:00','Overnight Express'),
+    (9,'SO-20335','FUR-CH-10000454','2017-06-22 00:00:00',2,'2017-06-26 00:00:00','Standard Class'),
+    (10,'SO-20335','FUR-BO-10001798','2017-05-01 00:00:00',3,'2017-05-02 00:00:00','First Class');
 
 INSERT INTO REGION (Region) VALUES
 ('South'),
