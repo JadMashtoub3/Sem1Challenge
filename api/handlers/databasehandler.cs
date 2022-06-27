@@ -13,7 +13,7 @@ namespace challengeAPI
                 builder.DataSource = "pracchal.database.windows.net";
                 builder.UserID = "jadmash";
                 builder.Password = "Skylines33!";
-                builder.InitialCatalog = "pracchal"; //database name
+                builder.InitialCatalog = "pracchal"; 
                 return builder.ConnectionString;
             }
             catch (Exception e)

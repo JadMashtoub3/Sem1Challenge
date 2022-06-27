@@ -1,3 +1,4 @@
+
 <table>
   <thead>
       <tr>
@@ -22,4 +23,39 @@
   </tr>
 </tbody>
 </table>
+<div class="create-order">
+  <h2>add an order</h2>
+  <label>Customer </label>
+  <select #custSelect (change)="onChange(custSelect.value)" [(ngModel)]="createCustID">
+      <option *ngFor="let customer of customers" [value]="customer.custID">{{customer.fullName}}</option>
+  </select>
+  <br>
+  <br>
+  <label>Product </label>
+  <select #prodSelect (change)="onChange(prodSelect.value)" [(ngModel)]="createProdID">
+      <option *ngFor="let prod of products" [value]="prod.prodID">{{prod.prodID}} - {{prod.description}}</option>
+  </select>
+  <br>
+  <br>
+  <label>Order Date </label>
+  <input type="date" [(ngModel)]="createOrderDate">
+  <br>
+  <br>
+  <label>Ship Date </label>
+  <input type="date" [(ngModel)]="createShipDate">
+  <br>
+  <br>
+  <label>Quantity </label>
+  <input type="number" min=1 [(ngModel)]="createQuantity">
+  <br>
+  <br>
+  <label>Shipping </label>
+  <select #shipSelect (change)="shippingChange(shipSelect.value)" [(ngModel)]="createShipMode">
+      <option *ngFor="let ship of shipMode" [value]="ship">{{ship}}</option>
+  </select>
+  <br>
+  <br>
+  <button (click)="createOrder()">Create Order</button>
+  <!-- <button (click)="deleteOrder()">deleteOrder</button> -->
+</div>
 

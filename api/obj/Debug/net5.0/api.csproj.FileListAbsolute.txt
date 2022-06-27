@@ -68,3 +68,8 @@ C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\obj\Debug\net5.0\scopedcss\bu
 C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
 C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\obj\Debug\net5.0\api.csproj.CopyComplete
 C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\bin\Debug\net5.0\publish\web.config
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\bin\Debug\net5.0\publish\api.deps.json
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\bin\Debug\net5.0\publish\api.runtimeconfig.json
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\bin\Debug\net5.0\publish\appsettings.Development.json
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\bin\Debug\net5.0\publish\appsettings.json

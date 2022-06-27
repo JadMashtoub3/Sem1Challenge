@@ -1,0 +1,17 @@
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\api.exe
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\appsettings.Development.json
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\appsettings.json
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\api.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\api.deps.json
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\api.runtimeconfig.json
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\api.pdb
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\Microsoft.OpenApi.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\System.Data.SqlClient.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\runtimes\win-arm64\native\sni.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\runtimes\win-x64\native\sni.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\runtimes\win-x86\native\sni.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ADMIN\Desktop\challenge\Sem1Challenge\api\publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
