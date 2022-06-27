@@ -97,5 +97,21 @@ namespace challengeAPI
                 }
             }
         }
+        public string UpdateOrder(Order newOrder)
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection conn = new SqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+                using (SqlCommand command = new SqlCommand($"UPDATE [Order] SET CustID = '{newOrder.CustID}', ProdID = '{newOrder.ProdID}', OrderDate = '{newOrder.OrderDate}', Quantity = {newOrder.Quantity}, ShipDate = '{newOrder.ShipDate}', ShipMode = '{newOrder.ShipMode}' WHERE OrderID = {newOrder.OrderID}", conn))
+                {
+                    rowsAffected = command.ExecuteNonQuery();
+                }
+
+                conn.Close();
+            }
+            return rowsAffected.ToString();
+        }
     }
 }

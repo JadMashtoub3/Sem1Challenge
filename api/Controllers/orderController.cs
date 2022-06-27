@@ -43,5 +43,16 @@ namespace challengeAPI
         {
             return dbHandler.DeleteOrder(OrderID);
         }
+        /// <summary>
+        /// Update an order
+        /// </summary>
+        /// <param name="newOrder"></param>
+        /// <returns></returns>
+        [HttpPut]
+        [Route("/update-order")]
+        public string UpdateOrder([FromBody] Order newOrder)
+        {
+            return dbHandler.UpdateOrder(newOrder);
+        }
     }
 }
