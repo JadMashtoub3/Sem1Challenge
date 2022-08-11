@@ -10,10 +10,10 @@ namespace challengeAPI
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "pracchal.database.windows.net";
-                builder.UserID = "jadmash";
+                builder.DataSource = "sem1challenge.database.windows.net";
+                builder.UserID = "jad";
                 builder.Password = "Skylines33!";
-                builder.InitialCatalog = "pracchal"; 
+                builder.InitialCatalog = "sem1challenge"; 
                 return builder.ConnectionString;
             }
             catch (Exception e)
